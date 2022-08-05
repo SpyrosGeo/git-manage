@@ -1,0 +1,11 @@
+#!/bin/sh
+flag="$1"
+flag1="-set"
+value=`cat /home/thatguy/.myscripts/git-manage/config.txt`
+if [ -n "$1" ];then
+	if [ "$1" = "$flag1" ];then
+		echo "$2" > /home/thatguy/.myscripts/git-manage/config.txt
+	fi
+else
+x=`git checkout -f "$value"`
+fi
